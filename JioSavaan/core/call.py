@@ -580,11 +580,6 @@ class Call(PyTgCalls):
         @self.three.on_update()
         @self.four.on_update()
         @self.five.on_update()
-        @self.one.on_left()
-        @self.two.on_left()
-        @self.three.on_left()
-        @self.four.on_left()
-        @self.five.on_left()
         async def stream_services_handler(_, chat_id: int):
             await self.stop_stream(chat_id)
 
