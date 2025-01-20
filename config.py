@@ -7,22 +7,22 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = "27758016"
-API_HASH = "8d34cfffe27ab461eabbf0091b1a27df"
+API_ID = int(getenv("API_ID", ""))
+API_HASH = getenv("API_HASH")
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = "7940603237:AAGvLtMV-WhNPyR2_odpyE4vtFq9MqQJeOU"
+BOT_TOKEN = getenv("BOT_TOKEN")
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = "mongodb+srv://tennyson2002:tennyson2002@cluster0.h1vm3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 6000))
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 1200))
 
 # Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID", "-1002251188406"))
+LOGGER_ID = int(getenv("LOGGER_ID", ""))
 
 # Get this value from @FallenxBot on Telegram by /id
-OWNER_ID = 7224419362
+OWNER_ID = int(getenv("OWNER_ID", ""))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -32,15 +32,16 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Marwin2002/JioSaavn",
+    "https://github.com/jiosaavnmusic/JioSaavn",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/The_Architect04")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Team_Supporty")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/nobi_bots")
+
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/anime_societyy")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -52,7 +53,7 @@ SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
 
 
 # Maximum limit for fetching playlist's track from youtube, spotify, apple links.
-PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "700"))
+PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "50"))
 
 
 # Telegram audio and video file size limit (in bytes)
@@ -62,7 +63,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 
 
 # Get your pyrogram v2 session from @StringFatherBot on Telegram
-STRING1 = "BQC86fAAVClOG14AbdQ0E5C15jJTO2Ft4uyZnFZtgSWt2wdDAhVkZSZdiFSeBpfLCtrR6WP9sNJY2nvZX0ux_BeBacFWGoGS9yGgup3ODPc5yfD7jF0PFZsdXWP4cwZEdYr8Zo_B28Dxh_1hwBigNz41wODoG6i2P59r_cc2ckNHuwxe66PSKyDqQpe0MjpkSx8RnRkcuGRRpDpb71YWrAdRyTpz5qda-Oi8TrZpdvoQYanBhWI9RNEM7ZrgQYsfGo6XfFT8kPvJRY4sFxufmX-TUk0znzuOVgIkRe8MnCNZWU-1E9pKFbh4CjruXhD1yUYRMySgsaIAaElxcAv2L-CF8yH6DgAAAAHoTI4-AA"
+STRING1 = getenv("STRING_SESSION", None)
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
@@ -78,21 +79,21 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://envs.sh/rEw.jpg"
+    "START_IMG_URL", "https://envs.sh/kRs.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://envs.sh/r2A.jpg"
+    "PING_IMG_URL", "https://envs.sh/JKS.jpg"
 )
-PLAYLIST_IMG_URL = "https://envs.sh/rw8.jpg"
-STATS_IMG_URL = "https://envs.sh/r2j.jpg"
-TELEGRAM_AUDIO_URL = "https://envs.sh/CLg.jpeg"
-TELEGRAM_VIDEO_URL = "https://envs.sh/CLg.jpeg"
-STREAM_IMG_URL = "https://envs.sh/CLg.jpeg"
-SOUNCLOUD_IMG_URL = "https://envs.sh/CLg.jpeg"
-YOUTUBE_IMG_URL = "https://envs.sh/CLg.jpeg"
-SPOTIFY_ARTIST_IMG_URL = "https://envs.sh/CLg.jpeg"
-SPOTIFY_ALBUM_IMG_URL = "https://envs.sh/CLg.jpeg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://envs.sh/CLg.jpeg"
+PLAYLIST_IMG_URL = "https://envs.sh/oX0.jpg"
+STATS_IMG_URL = "https://telegra.ph/file/d30d11c4365c025c25e3e.jpg"
+TELEGRAM_AUDIO_URL = "https://envs.sh/r78.jpg"
+TELEGRAM_VIDEO_URL = "https://telegra.ph/file/e575ae40d6635250974e1.jpg"
+STREAM_IMG_URL = "https://telegra.ph/file/03efec694e41e891b29dc.jpg"
+SOUNCLOUD_IMG_URL = "https://telegra.ph/file/d723f4c80da157fca1678.jpg"
+YOUTUBE_IMG_URL = "https://telegra.ph/file/4dc854f961cd3ce46899b.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph/file/d723f4c80da157fca1678.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph/file/6c741a6bc1e1663ac96fc.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/6c741a6bc1e1663ac96fc.jpg"
 
 
 def time_to_seconds(time):
