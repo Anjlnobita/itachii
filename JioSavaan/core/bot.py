@@ -54,7 +54,7 @@ class Anony(Client):
 
 
 
-
+"""
 class nobita(Client):
     def __init__(self):
         super().__init__(
@@ -75,3 +75,4 @@ class nobita(Client):
 
     async def stop(self):
         await super().stop()
+"""
