@@ -570,11 +570,11 @@ class Call(PyTgCalls):
             await self.five.start()
 
     async def decorators(self):
-        @self.one.on_kicked()
-        @self.two.on_kicked()
-        @self.three.on_kicked()
-        @self.four.on_kicked()
-        @self.five.on_kicked()
+        @self.one.leave_call()
+        @self.two.leave_call()
+        @self.three.leave_call()
+        @self.four.leave_call()
+        @self.five.leave_call()
         @self.one.on_closed_voice_chat()
         @self.two.on_closed_voice_chat()
         @self.three.on_closed_voice_chat()
