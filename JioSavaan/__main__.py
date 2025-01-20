@@ -5,7 +5,7 @@ from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from JioSavaan import LOGGER, app, userbot, iapp
+from JioSavaan import LOGGER, app, userbot,# iapp
 from JioSavaan.core.call import Anony
 from JioSavaan.misc import sudo
 from JioSavaan.plugins import ALL_MODULES
@@ -34,7 +34,7 @@ async def init():
     except:
         pass
     await app.start()
-    await iapp.start()
+  #  await iapp.start()
     for all_module in ALL_MODULES:
         importlib.import_module("JioSavaan.plugins" + all_module)
     LOGGER("JioSavaan.plugins").info("Successfully Imported Modules...")
@@ -55,7 +55,7 @@ async def init():
     )
     await idle()
     await app.stop()
-    await iapp.stop()
+  #  await iapp.stop()
     await userbot.stop()
     LOGGER("JioSavaan").info("Stopping JioSavaan Bot...")
 
