@@ -36,7 +36,7 @@ async def assis_change(client, message: Message, _):
     await message.reply_text(DETAILS, disable_web_page_preview=True)
 
 
-@app.on_message(filters.command("setassistant") & ~BANNED_USERS)
+@iapp.on_message(filters.command("setassistant") & ~BANNED_USERS)
 @AdminActual
 async def assis_set(client, message: Message, _):
     if await assistant():
@@ -61,16 +61,16 @@ async def assis_set(client, message: Message, _):
     except:
         pass
     await message.reply_text(
-        "**Yᴏᴜʀ ᴄʜᴀᴛ's ɴᴇᴡ ᴀssɪsᴛᴀɴᴛ ᴅᴇᴛᴀɪʟs:**\nAssɪsᴛᴀɴᴛ Nᴀᴍᴇ :- {b.name}\nUsᴇʀɴᴀᴍᴇ :- @{b.username}\nID:- {b.id}",
+        "**Yᴏᴜʀ ᴄʜᴀᴛ's ɴᴇᴡ ᴀssɪsᴛᴀɴᴛ ᴅᴇᴛᴀɪʟs:**\nAssɪsᴛᴀɴᴛ Nᴀᴍᴇ :- {b.fristname}\nUsᴇʀɴᴀᴍᴇ :- @{b.username}\nID:- {b.id}",
         disable_web_page_preview=True,
     )
 
 
-@app.on_message(filters.command("checkassistant") & filters.group & ~BANNED_USERS)
+@iapp.on_message(filters.command("checkassistant") & filters.group & ~BANNED_USERS)
 @AdminActual
 async def check_ass(client, message: Message, _):
     a = await get_assistant(message.chat.id)
     await message.reply_text(
-        "**Yᴏᴜʀ ᴄʜᴀᴛ's ᴀssɪsᴛᴀɴᴛ ᴅᴇᴛᴀɪʟs:**\nAssɪsᴛᴀɴᴛ Nᴀᴍᴇ :- {a.name}\nAssɪsᴛᴀɴᴛ\nUsᴇʀɴᴀᴍᴇ :- @{a.username}\nAssɪsᴛᴀɴᴛ ID:- {a.id}",
+        "**Yᴏᴜʀ ᴄʜᴀᴛ's ᴀssɪsᴛᴀɴᴛ ᴅᴇᴛᴀɪʟs:**\nAssɪsᴛᴀɴᴛ Nᴀᴍᴇ :- {a.fristname}\nAssɪsᴛᴀɴᴛ\nUsᴇʀɴᴀᴍᴇ :- @{a.username}\nAssɪsᴛᴀɴᴛ ID:- {a.id}",
         disable_web_page_preview=True,
     )
