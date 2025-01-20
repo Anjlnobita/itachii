@@ -13,7 +13,7 @@ heroku()
 
 app = Anony()
 userbot = Userbot()
-#iapp = nobita
+# iapp = nobita
 
 from .platforms import *
 
