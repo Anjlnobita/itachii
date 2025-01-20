@@ -14,7 +14,7 @@ from pytgcalls.exceptions import (
 from pytgcalls.types import Update
 
 from pytgcalls.types import MediaStream
-from pytgcalls.types import AudioQuality.STUDIO, VideoQuality.SD_720p
+from pytgcalls.types import AudioQuality, VideoQuality
 
 from pytgcalls.types import StreamAudioEnded
 import config
