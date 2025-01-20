@@ -5,7 +5,7 @@ from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from JioSavaan import LOGGER, app, userbot,# iapp
+from JioSavaan import LOGGER, app, userbot
 from JioSavaan.core.call import Anony
 from JioSavaan.misc import sudo
 from JioSavaan.plugins import ALL_MODULES
