@@ -575,26 +575,26 @@ class Call(PyTgCalls):
         @self.three.leave_call()
         @self.four.leave_call()
         @self.five.leave_call()
-        @self.one.on_closed_voice_chat()
-        @self.two.on_closed_voice_chat()
+        @self.one.on_closed_group_call()
+        @self.two.on_closed_group_call()
         @self.three.on_closed_voice_chat()
-        @self.four.on_closed_voice_chat()
-        @self.five.on_closed_voice_chat()
-        @self.one.on_left()
-        @self.two.on_left()
-        @self.three.on_left()
-        @self.four.on_left()
-        @self.five.on_left()
+        @self.four.on_closed_group_call()
+        @self.five.on_closed_group_call()
+        @self.one.on_left_group_call()
+        @self.two.on_left_group_call()
+        @self.three.on_left_group_call()
+        @self.four.on_left_group_call()
+        @self.five.on_left_group_call()
         async def stream_services_handler(_, chat_id: int):
             await self.stop_stream(chat_id)
 
-        @self.one.on_stream_end()
-        @self.two.on_stream_end()
-        @self.three.on_stream_end()
-        @self.four.on_stream_end()
-        @self.five.on_stream_end()
+        @self.one.on_audio_stream_end()
+        @self.two.on_audio_stream_end()
+        @self.three.on_audio_stream_end()
+        @self.four.on_audio_stream_end()
+        @self.five.on_audio_stream_end()
         async def stream_end_handler1(client, update: Update):
-            if not isinstance(update, StreamAudioEnded):
+            if not isinstance(update, AudioStreamEnd):
                 return
             await self.change_stream(client, update.chat_id)
 
