@@ -21,8 +21,8 @@ async def assis_change(client, message: Message, _):
     if len(message.command) > 2:
         return await message.reply_text(usage)
     a = await get_assistant(message.chat.id)
-    DETAILS = f"ʏᴏᴜʀ ᴄʜᴀᴛ's ᴀssɪsᴛᴀɴᴛ ʜᴀs ʙᴇᴇɴ ᴄʜᴀɴɢᴇᴅ ғʀᴏᴍ [{a.name}](https://t.me/{a.username}) "
-    if not message.chat.id == LOG_GROUP_ID:
+    DETAILS = f"ʏᴏᴜʀ ᴄʜᴀᴛ's ᴀssɪsᴛᴀɴᴛ ʜᴀs ʙᴇᴇɴ ᴄʜᴀɴɢᴇᴅ ғʀᴏᴍ [{a.fristname}](https://t.me/{a.username}) "
+    if not message.chat.id == LOGGER_ID:
         try:
             await a.leave_chat(message.chat.id)
         except:
