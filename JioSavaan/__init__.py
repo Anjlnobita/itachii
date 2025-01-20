@@ -1,4 +1,4 @@
-from JioSavaan.core.bot import Anony, # nobita
+from JioSavaan.core.bot import Anony
 from JioSavaan.core.dir import dirr
 from JioSavaan.core.git import git
 from JioSavaan.core.userbot import Userbot
