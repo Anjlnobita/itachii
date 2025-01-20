@@ -1,4 +1,4 @@
-from JioSavaan.core.bot import Anony
+from JioSavaan.core.bot import Anony, nobita
 from JioSavaan.core.dir import dirr
 from JioSavaan.core.git import git
 from JioSavaan.core.userbot import Userbot
@@ -13,7 +13,7 @@ heroku()
 
 app = Anony()
 userbot = Userbot()
-
+iapp = nobita
 
 from .platforms import *
 
