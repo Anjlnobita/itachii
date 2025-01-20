@@ -47,6 +47,22 @@ skipmode = {}
 # Total Queries on bot
 
 
+
+async def save_assistant(chat_id, number):
+    number = int(number)
+    await assdb.update_one(
+        {"chat_id": chat_id},
+        {"$set": {"assistant": number}},
+        upsert=True,
+    )
+
+
+
+
+
+
+
+
 async def get_queries() -> int:
     chat_id = 98324
     mode = await queriesdb.find_one({"chat_id": chat_id})
