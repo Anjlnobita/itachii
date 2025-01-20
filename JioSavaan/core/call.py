@@ -581,10 +581,7 @@ class Call(PyTgCalls):
         @self.four.on_update()
         @self.five.on_update()
         
-        async def stream_end_handler1(client, update: Update):
-            if not isinstance(update, StreamAudioEnded):
-                return
-            await self.change_stream(client, update.chat_id)
+        
 
 
 Anony = Call()
