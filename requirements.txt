@@ -23,4 +23,4 @@ unidecode
 yt-dlp
 youtube-search
 youtube-search-python
-git+https://github.com/Anjlnobita/pytgcalls@master
+git+https://github.com/Anjlnobita/pytgcallss@master
