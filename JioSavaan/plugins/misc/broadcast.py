@@ -4,17 +4,17 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.errors import FloodWait
 
-from JioSavaan import app
-from JioSavaan.misc import SUDOERS
-from JioSavaan.utils.database import (
+from  import app
+from AviaxMusic.misc import SUDOERS
+from AviaxMusic.utils.database import (
     get_active_chats,
     get_authuser_names,
     get_client,
     get_served_chats,
     get_served_users,
 )
-from JioSavaan.utils.decorators.language import language
-from JioSavaan.utils.formatters import alpha_to_int
+from AviaxMusic.utils.decorators.language import language
+from AviaxMusic.utils.formatters import alpha_to_int
 from config import adminlist
 
 IS_BROADCASTING = False
@@ -36,7 +36,7 @@ async def braodcast_message(client, message, _):
         else:
             content_type = 'text'
             text_content = message.reply_to_message.text
-            
+
         caption = message.reply_to_message.caption
         reply_markup = message.reply_to_message.reply_markup if hasattr(message.reply_to_message, 'reply_markup') else None
 
@@ -82,7 +82,7 @@ async def braodcast_message(client, message, _):
         IS_BROADCASTING = False
         return
 
-    
+
     if message.reply_to_message:
         x = message.reply_to_message.id
         y = message.chat.id
@@ -178,7 +178,7 @@ async def braodcast_message(client, message, _):
     if "-assistant" in message.text:
         aw = await message.reply_text(_["broad_5"])
         text = _["broad_6"]
-        from AnonXMusic.core.userbot import assistants
+        from AviaxMusic.core.userbot import assistants
 
         for num in assistants:
             sent = 0
