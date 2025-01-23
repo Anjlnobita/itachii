@@ -4,23 +4,24 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.errors import FloodWait
 
-from  import app
-from AviaxMusic.misc import SUDOERS
-from AviaxMusic.utils.database import (
+from JioSavaan import app
+from JioSavaan.misc import SUDOERS
+from JioSavaan.utils.database import (
     get_active_chats,
     get_authuser_names,
     get_client,
     get_served_chats,
     get_served_users,
 )
-from AviaxMusic.utils.decorators.language import language
-from AviaxMusic.utils.formatters import alpha_to_int
+from JioSavaan.utils.decorators.language import language
+from JioSavaan.utils.formatters import alpha_to_int
 from config import adminlist
+import config
 
 IS_BROADCASTING = False
+OWNER = config.OWNER_ID
 
-
-@app.on_message(filters.command("broadcast") & SUDOERS)
+@app.on_message(filters.command("broadcast") & OWNER)
 @language
 async def braodcast_message(client, message, _):
     global IS_BROADCASTING
