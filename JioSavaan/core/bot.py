@@ -5,7 +5,7 @@ import config
 
 from ..logging import LOGGER
 
-LOGGER_ID = 6777860063
+LOGGER_ID = -1002274287324
 class Anony(Client):
     def __init__(self):
         LOGGER(__name__).info(f"Starting Bot...")
@@ -27,7 +27,7 @@ class Anony(Client):
 
         try:
             await self.send_message(
-                chat_id=6777860063,
+                chat_id=-1002274287324,
                 text=f"<u><b>» {self.mention} ʙᴏᴛ sᴛᴀʀᴛᴇᴅ :</b><u>\n\nɪᴅ : <code>{self.id}</code>\nɴᴀᴍᴇ : {self.name}\nᴜsᴇʀɴᴀᴍᴇ : @{self.username}",
             )
         except (errors.ChannelInvalid, errors.PeerIdInvalid):
@@ -41,7 +41,7 @@ class Anony(Client):
             )
             exit()
 
-        a = await self.get_chat_member(6777860063, self.id)
+        a = await self.get_chat_member(-1002274287324, self.id)
         if a.status != ChatMemberStatus.ADMINISTRATOR:
             LOGGER(__name__).error(
                 "Please promote your bot as an admin in your log group/channel."
